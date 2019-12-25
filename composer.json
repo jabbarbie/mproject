@@ -13,7 +13,8 @@
     "require": {
         "php": ">=7.2",
         "codeigniter4/codeigniter4": "dev-develop",
-        "myth/auth": "=1.0-beta.2"
+        "myth/auth": "=1.0-beta.2",
+        "mpdf/mpdf": "^8.0"
         
     },
     "require-dev": {

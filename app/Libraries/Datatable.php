@@ -154,9 +154,8 @@ class Datatable {
     public function pencarianByKolom($kolom)
     {
         // $this->countpencarian = 0;
-        $this->countpencarian = $this->builder->countAllResults(FALSE);
 
-        if(isset($this->request->getPost('search')['value'])){
+        if(($this->request->getPost('search')['value'])){
             foreach ($kolom as $key => $value) {
                 $x	= ($key > 0)?'orLike':'like';
                 $this->builder->{$x}($value, $this->request->getPost('search')['value']);
@@ -178,6 +177,8 @@ class Datatable {
                 return $this;
             }
         }
+        $this->countpencarian = $this->builder->countAllResults(FALSE);
+
 
         return $this;
     }

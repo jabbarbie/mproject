@@ -14,6 +14,8 @@ import { } from './fungsi/statusterkini.js'
 import { info } from './fungsi/informasi.js'
 import grafik from './fungsi/chart.js'
 
+
+console.log(page.currentPage)
 dtable.muat()
 grafik.muat()
 laporandtable.muat()
@@ -24,7 +26,7 @@ $(".formx").submit(async function(e){
     e.preventDefault()
     
 	await setForm.post()
-	// await dtable.reset()
+	await dtable.reset()
 })
 
 $(".forms").submit(async function(e){
@@ -33,6 +35,8 @@ $(".forms").submit(async function(e){
 	
 	let dataForm = new FormData(e.originalEvent.target)  
 	dataForm.append('pencarian', true)
+
+	dataForm.append('id_pegawai', 1)
 	const data = objectFromFormData(dataForm)
   
 	console.log(data);
@@ -41,6 +45,23 @@ $(".forms").submit(async function(e){
 	// await dtable.muat()
 	await dtable.reset()
 })
+
+/**
+ * Khusus Pencarian di laporan
+ */
+$(".forml").submit(async function(e){
+	e.preventDefault()
+	
+	let dataForm = new FormData(e.originalEvent.target)  
+	dataForm.append('pencarian', true)
+
+	const data = objectFromFormData(dataForm)
+  
+	console.log(data);
+	await laporandtable.pencarian(data)
+	await laporandtable.reset()
+})
+
 
 // Ubah Status Agen
 $("#dtable tbody").on('click','.status', function(e){

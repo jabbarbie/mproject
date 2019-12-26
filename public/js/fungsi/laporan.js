@@ -18,33 +18,33 @@ class dtable{
       //   "search": "Pencariaxn",
       // },
 
-      dom: 'Bfrtip',
-      buttons: [
-          'copy',
-          {
-            text: 'Excel', 
-            extend: 'excel', 
-            className: 'bg-success'
-          },
+      // dom: 'Bfrtip',
+      // buttons: [
+          // 'copy',
+          // {
+          //   text: 'Excel', 
+          //   extend: 'excel', 
+          //   className: 'bg-success'
+          // },
           
-          {
-            text: 'print', 
-            extend: 'print'
-          },
-          {
-            text: 'pdf',
-            extend: 'pdf',
-            messageTop: 'Pesan ini ada di atas',
-            messageBottom: 'Pesan ini ada di bawah',
-            title: 'Laporan Sate Kambing'
-          }
+          // {
+          //   text: 'print', 
+          //   extend: 'print'
+          // },
+          // {
+          //   text: 'pdf',
+          //   extend: 'pdf',
+          //   messageTop: 'Pesan ini ada di atas',
+          //   messageBottom: 'Pesan ini ada di bawah',
+          //   title: 'Laporan Sate Kambing'
+          // }
           // {
           //   text: 'Tambah Data',
           //   action: function(e){
           //     alert ('sate kambing')
           //   }
           // }
-      ]
+      // ]
     });
   }
   pencarian(dataPencarian){

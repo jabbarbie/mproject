@@ -117,9 +117,9 @@ $routes->group('/', ['filter' => 'role:admin,superadmin,cluster,cabang,srbb,atf'
 		$routes->get('statusterkini', 'Statusterkini::index');
 	});
 
-	$routes->group('/laporan', ['namespace' => 'App\Controllers\Laporan'], function($routes){
-		$routes->get('pegawai', 'LPegawai::index');
-	});
+	$routes->get('lpegawai', 'LPegawai::index');
+	$routes->get('lpegawai/show', 'LPegawai::show');
+
 });
 
 /**

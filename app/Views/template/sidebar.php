@@ -98,7 +98,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?php echo base_url('laporan/pegawai') ?>" target="_blank" data-parent="mlpegawai" class="nav-link lpegawai">
+                  <a href="<?php echo base_url('lpegawai') ?>" data-parent="mlpegawai" class="nav-link lpegawai">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Seluruh Data Pegawai</p>
                   </a>

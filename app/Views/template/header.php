@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<title>MProject V1 - <?= $halaman??'Administrator'?></title>
+<title><?= env('APP_NAME')?> - <?= $halaman??'Administrator'?></title>
 
 <!-- Font Awesome Icons -->
 <link rel="stylesheet" href="<?= base_url() ?>/node_modules/@fortawesome/fontawesome-free/css/all.min.css">

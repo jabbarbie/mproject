@@ -15,12 +15,13 @@ class status {
         .then(d => d.json())
         .then(dd => {
 
+            if(dd.data == undefined) return
             var menunya = document.getElementById(id)
 
             var j = document.createElement("span")
             j.className = `badge badge-${warna} right`
             j.appendChild(document.createTextNode(dd.data))
-    
+            
             menunya.appendChild(j)
 
         })

@@ -3,7 +3,7 @@
     <a href="<?= base_url() ?>" class="brand-link">
       <!-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8"> -->
-      <span class="brand-text font-weight-light m-3 text-sm">MProject V.3.7</span>
+      <span class="brand-text font-weight-light m-3 text-sm"><?= env('APP_NAME')?></span>
     </a>
 
     <!-- Sidebar -->
@@ -11,10 +11,11 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-2 pb-2 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url() ?>/dist/img/pp<?= user()->username??'default'?>.png" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url() ?>/dist/img/pp<?= user()->username??'default'?>.png" class="img-circle elevation-2 mt-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo strtoupper(user()->username??'Undefined') ?></a>
+          <a href="#" class="text-sm d-block  p-0 m-0">Selamat Datang</a>
+          <a href="#" class="d-block text-white"><?php echo strtoupper(user()->username??'Undefined') ?></a>
         </div>
       </div>
 

@@ -1,3 +1,6 @@
 .lebarNotif {
 	min-width: 200px !important;
 }
+#dtable_wrapper .btn-group {
+	position: absolute
+}

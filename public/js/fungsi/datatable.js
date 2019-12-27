@@ -1,6 +1,7 @@
 import page from './info.js'
 class dtable{
   muat(){
+    console.log(page.currentPage)
     this._data = $("#dtable").DataTable({
       "autoWidth" : true,
     //   "columnDefs": [
@@ -18,8 +19,23 @@ class dtable{
       //   "search": "Pencariaxn",
       // },
 
-      // "dom" : '<"toolbar">frtip' 
+      // "dom" : '<"toolbar">frtip', 
       // "bLengthChange" : false,
+      dom: 'Bfrtip',
+      buttons: [
+        {
+            text: '<i class="fas fa-file-excel"></i>', 
+            extend: 'excel', 
+            className: 'btn-success btn-sm mr-1'
+        },
+        {
+          text: '<i class="fas fa-file-pdf"></i>', 
+          extend: 'pdf', 
+          className: 'btn-info btn-sm '
+        }
+
+        // 'excel'
+      ]
     });
   }
   pencarian(dataPencarian){
@@ -35,49 +51,3 @@ class dtable{
 
 }
 export default new dtable()
-// // export dtablex = (pencarian) => {
-// export function dtable(pencarian) {
-//   // const dtable = $("#dataku")
-
-//   // dtable.DataTable().clear().destroy();
-//   $("#dataku").DataTable({
-//     "fixedColumns": true,
-//     "autoWidth" : true,
-//     "columnDefs": [
-//             { width: '8%', targets: -1 }
-//         ],
-//     "processing": true,
-//     "serverSide": true,
-//     "order": [],
-//     // "ajax": {url: set.page + '/dtable', type: "POST"},
-//     // "ajax": {url: `${set.page}/dtable`, type: "POST"},
-//     "ajax": {url: `${page.currentPage}/dtable`, type: "POST", data: pencarian},
-      
-//     "language" : {
-//       "emptyTable" : "Data tidak ditemukan",
-//       "search": "Pencarian",
-//     },
-//     // "dom" : '<"toolbar">frtip' 
-//     // "bLengthChange" : false,
-//   });
-// }
-// // console.log(page.currentPage);
-// export function dtable_laporan(rep){
-//   $("#laporanku").DataTable().clear().destroy();
-//   $("#laporanku").DataTable({
-//     "paging":   false,
-//     "ordering": false,
-//     "info":     false,
-//     "searching": false,
-//     "order": [],
-
-//     "processing": true,
-//     "serverSide": true,
-//     "ajax": {url: page.currentPage + '/dtable_laporan', type: "POST", data: rep},
-
-//   });
-// }
-
-// export function buka(){
-//   console.log("buka");
-// }

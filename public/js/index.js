@@ -75,3 +75,17 @@ $("#dtable tbody").on('change','.status', async function(e){
 
 // Fungsi kecil
 tanggalrange()
+
+
+// laporan btn
+$("#btnlaporan_pdf").on('click', function(e) {
+	const form = document.querySelector(".forml")
+	console.log(form)
+	e.preventDefault()
+	
+	let dataForm = new FormData(form)  
+	dataForm.append('pencarian', true)
+
+	console.log(dataForm)
+	// window.open(`${page.currentPage}/show`)
+})

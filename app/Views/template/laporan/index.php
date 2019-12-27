@@ -18,7 +18,6 @@
   <!-- /.content-wrapper -->
 
 
-  </div>
 
 </body>
 </html>

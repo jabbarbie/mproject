@@ -29,7 +29,7 @@
               <label for="inputAgen" class="col-sm-4 col-form-label"></label>
               <div class="col-sm-8 d-flex">
                 <input type="submit" class="col-4 btn btn-block bg-gradient-warning btn-sm mr-1" value="Cari">
-                <button class="col-2 btn bg-gradient-primary btn-sm mr-1">PDF</button>
+                <button class="col-2 btn bg-gradient-primary btn-sm mr-1" id="btnlaporan_pdf">PDF</button>
                 <button class="col-3 btn bg-gradient-success btn-sm">Excel</button>
               </div>
             </div>                      

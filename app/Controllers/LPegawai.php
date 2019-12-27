@@ -3,6 +3,7 @@
 use CodeIgniter\Controller;
 
 
+
 class LPegawai extends Controller
 {
     
@@ -19,13 +20,6 @@ class LPegawai extends Controller
 
     public function show()
     {
-        $mpdf = new \Mpdf\Mpdf([
-            'default_font' => 'Verdana',
-            'mode' => 'utf-8',
-            'format' => [190, 236],
-            'orientation' => 'P',
-
-        ]);
         $pegawai    = new \App\Models\MPegawai();
         $agen       = new \App\Models\MAgen();
         $pe = $pegawai->getTopPegawai();
@@ -39,10 +33,12 @@ class LPegawai extends Controller
             'currentPage'   => 'lpegawai',
             'data'          => $pe,
         ];
-
         $html =  view('laporan/pegawai/pdf', $data);
+
+        $mpdf = new \Mpdf\Mpdf();
         $mpdf->WriteHTML($html);
         $mpdf->Output();
+        die();
 
     }
     public function dtable()

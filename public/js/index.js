@@ -1,6 +1,6 @@
 'use strict'
 import page from './fungsi/info.js'
-import { objectFromFormData } from './fungsi/fungsi_kecil.js'
+import { objectFromFormData, objectToURL, formDataToJSON } from './fungsi/fungsi_kecil.js'
 
 import { tanggalrange } from './fungsi/tanggal.js'
 import dtable from './fungsi/datatable.js'
@@ -87,5 +87,8 @@ $("#btnlaporan_pdf").on('click', function(e) {
 	dataForm.append('pencarian', true)
 
 	console.log(dataForm)
-	// window.open(`${page.currentPage}/show`)
+	const j = objectFromFormData(dataForm)
+	const a = objectToURL(j)
+	
+	window.open(`${page.currentPage}/show/${a}`)
 })

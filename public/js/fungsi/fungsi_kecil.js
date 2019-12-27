@@ -48,6 +48,14 @@ export function formDataToJSON(formData){
   // return d
 }
 
+export function objectToURL(params)
+{
+  console.log(params);
+  
+  let queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&')
+  return queryString
+}
+
 // Baru //
 export function objectToArray(keterangan)
 {

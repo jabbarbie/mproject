@@ -26,11 +26,11 @@
                 </tr>
                 <tr class="kiri thtebal">
                     <td></td>
-                    <td class="textkecil">Agen Usaha</td>
+                    <td class="textkecil" colspan="4">Agen Usaha</td>
                 </tr>
             </thead>
             <tbody>
-                <?php $totaltarget = 0; $totalrealisasi = 0; $totalgap = 0 ?>
+                <?php $totaltarget = 0; $totalrealisasi = 0; $totalgap = 0; $jumagen = 0 ?>
                 <?php foreach ($data as $key => $value): ?>
                     <?php $gap = (int) ($value['default_target'] - $value['jumlah']) ?>
                     <?php
@@ -58,6 +58,7 @@
                     <tr>
                         <td></td>
                         <td class="textkecil"> - <?= $r['nama_agen'] ?></td>
+                        <?php $jumagen++ ?>
                     </tr>
 
                     <?php endforeach; ?>
@@ -68,7 +69,7 @@
             <tfoot>
                 <tr class="thtebal ">
                     <td></td>
-                    <td class="textkecil">Jumlah Agen dalam periode ini 7 agen dari 10 pegawai</td>
+                    <td class="textkecil">Jumlah Agen dalam periode ini <?= $jumagen ?> agen dari <?= count($data)?> pegawai</td>
                     <td class="textkecil" align="center"><?= $totaltarget?></td>
                     <td class="textkecil" align="center"><?= $totalrealisasi?></td>
                     <td class="textkecil" align="center"><?= $totalgap?></td>

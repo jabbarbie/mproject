@@ -32,7 +32,7 @@ class MPegawai extends Model
         $pegawai->select('*');
         $pegawai->selectCount('id_pegawai','jumlah');
 
-        if( is_array($periode) )
+        if( is_array($periode) && count($periode) > 0)
         {
             // $cabang->where('month(tanggal) = ',$periode['bulan']);
             $pegawai->where('tanggal >= ',$periode['tanggal_mulai']);

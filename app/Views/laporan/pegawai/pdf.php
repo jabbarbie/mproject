@@ -9,7 +9,7 @@
         </header>
 
         <div class="judultable">
-            <p>Untuk periode tanggal 01 Desember 2019 sampai 31 Desemper 2019 </p>
+            <p><?= $keterangan_periode?></p>
         </div>
         <table border="0" cellspacing=0 width="100%">
             <thead>
@@ -30,6 +30,8 @@
                 </tr>
             </thead>
             <tbody>
+                <?php if (count($data) > 0):?>
+                
                 <?php $totaltarget = 0; $totalrealisasi = 0; $totalgap = 0; $jumagen = 0 ?>
                 <?php foreach ($data as $key => $value): ?>
                     <?php $gap = (int) ($value['default_target'] - $value['jumlah']) ?>
@@ -75,6 +77,13 @@
                     <td class="textkecil" align="center"><?= $totalgap?></td>
                 </tr>
             </tfoot>
+
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="5"  align="center"><p>- Data Not Found -</p></td>
+                        </tr>
+            <?php endif; ?>
+
         </table>
 
 <?php $this->endSection() ?>

@@ -18,20 +18,43 @@ class LPegawai extends Controller
 
     }
 
-    public function show()
+    public function show($tanggal_mulai = 0, $tanggal_akhir = 0, $rperiode = null)
     {
+        /**
+         * Cek jika ada pencarian 
+         * Periode didapat dari daterangepicker di form pencarian
+         */
+        $keterangan = "Periode Bulan ".date('F Y');
+        $periode = array();
+        if($tanggal_mulai > 0){
+            $periode = [
+                'tanggal_mulai' => date('Y-m-d',$tanggal_mulai),
+                'tanggal_akhir' => date('Y-m-d',$tanggal_akhir),
+            ];
+            $keterangan = "Periode Bulan ".date('F Y', $tanggal_mulai);
+
+            if($rperiode == 'Custom%20Range')
+                $keterangan = "Periode Tanggal ".date('d F Y', $tanggal_mulai).' Sampai '.date('d F Y', $tanggal_akhir);
+
+        }
         $pegawai    = new \App\Models\MPegawai();
         $agen       = new \App\Models\MAgen();
-        $pe = $pegawai->getTopPegawai();
+        $pe = $pegawai->getTopPegawai($periode);
+        // $keterangan = $periode['tanggal_akhir'];
 
+        // echo count($periode);
+        // var_dump($periode);
+        // die();
         foreach($pe as $k => $r)
         {
             $pe[$k]['sate'] = $agen->getCabangByIDPegawai($r['id_pegawai']);
         }
+
         $data = [
             'halaman'       => 'Laporan Pegawai',
             'currentPage'   => 'lpegawai',
             'data'          => $pe,
+            'keterangan_periode'    => $keterangan
         ];
         $html =  view('laporan/pegawai/pdf', $data);
 

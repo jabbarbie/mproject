@@ -79,6 +79,7 @@ export function tanggalrange()
           
           $("#tanggal_mulai").val(start.unix())
           $("#tanggal_akhir").val(end.unix())
+          $("#periode").val(pilihan)
         }
   }) 
     

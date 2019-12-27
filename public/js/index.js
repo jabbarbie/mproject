@@ -80,6 +80,7 @@ tanggalrange()
 // laporan btn
 $("#btnlaporan_pdf").on('click', function(e) {
 	const form = document.querySelector(".forml")
+	
 	console.log(form)
 	e.preventDefault()
 	
@@ -90,5 +91,5 @@ $("#btnlaporan_pdf").on('click', function(e) {
 	const j = objectFromFormData(dataForm)
 	const a = objectToURL(j)
 	
-	window.open(`${page.currentPage}/show/${a}`)
+	window.open(`${page.currentPage}/show/${a}`,'Laporan')
 })

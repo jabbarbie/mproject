@@ -9,8 +9,10 @@
   
   <div class="card-body">
       <form class="form-horizontal forml" action="">
-        <input type="hidden" name="tanggal_mulai" id="tanggal_mulai" />
-        <input type="hidden" name="tanggal_akhir" id="tanggal_akhir" />
+        <input type="hidden" name="tanggal_mulai" id="tanggal_mulai" value="0" />
+        <input type="hidden" name="tanggal_akhir" id="tanggal_akhir" value="0" />
+        <input type="hidden" name="periode" id="periode" />
+
         <div class="row">
           <div class="col-sm-5">
 

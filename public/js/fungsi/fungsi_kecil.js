@@ -52,7 +52,8 @@ export function objectToURL(params)
 {
   console.log(params);
   
-  let queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&')
+  // let queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&')
+  let queryString = Object.keys(params).map(key => params[key]).join('/')
   return queryString
 }
 

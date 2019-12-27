@@ -67,6 +67,12 @@ class Datatable {
         $this->builder->where($kolom[0], $kolom[1]);
         return $this;
     }
+    public function join($table, $kondisi)
+    {
+        $this->builder->join($table, $kondisi);
+
+        return $this;
+    }
     /**
      * Fungsi khusus untuk membatasi agen mana saja yg boleh ditampilkan
      * berguna di halaman agen 

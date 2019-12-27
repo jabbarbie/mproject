@@ -71,7 +71,7 @@ export function tanggalrange()
         else{
           // untuk yg selain chart / grafik
           if(pilihan == 'Custom Range'){
-              $('#side_tanggal').html(start.format('MMMM') + ' - ' + end.format('MMMM YYYY'))
+              $('#side_tanggal').html(start.format('DD MMMM') + ' - ' + end.format('DD MMMM YYYY'))
           }
           else{
               $('#side_tanggal').html(start.format('MMMM YYYY'))

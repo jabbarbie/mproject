@@ -1,4 +1,4 @@
-<div class="card card-outline card-warning  ">
+<div class="card card-outline card-warning collapsed-card ">
   <div class="card-header bg-primary">
       <h3 class="card-title">Pencarian</h3>
       <div class="card-tools">

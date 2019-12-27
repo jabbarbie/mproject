@@ -9,13 +9,6 @@ class Pegawai extends BaseController
 	public function index()
 	{
         helper('auth');
-        // taruh di sidebar menu
-        // var_dump(in_groups(['superadmin'])); // buat setting role, cabang, admin, cluster
-
-
-        // var_dump(user()->username);
-        // die();
-
         $kategori   = new MKategori();
         $data = [
             'halaman'       => 'Pegawai',
@@ -104,11 +97,18 @@ class Pegawai extends BaseController
         $dt = new \App\Libraries\Datatable();
         $LibStatus  = new \App\Libraries\Status();
         $data = array();
-    
         helper('btn');
+        
+        $formSearch = array();
+        if($this->request->getPost('pencarian')){
+            $formSearch  = [
+                'id_kategori' => $this->request->getPostGet('id_kategori'),
+            ];
+        }
         $nu = $dt->koneksi('view_estimasipegawaicount')
                  ->pk('id_pegawai')
                  ->pencarianByKolom(['nama_pegawai','nik'])
+                 ->pencarianForm($formSearch)
                  ->run();
         
     

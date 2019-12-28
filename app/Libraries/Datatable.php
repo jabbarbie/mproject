@@ -148,6 +148,15 @@ class Datatable {
 
         return $this;
     }
+    public function groupBy($field = null)
+    {
+        if($field)
+        {
+            $this->builder->groupBy($field);    
+        }
+
+        return $this;
+    }
     public function getJumlah()
     {
         $iint = (int) $this->countpencarian;

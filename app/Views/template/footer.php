@@ -56,8 +56,20 @@
 //Date range picker
 $('#periode').daterangepicker({
   showDropdowns: true,
-  drops: 'up'
-})
+  drops: 'up',
+  locale : {
+    direction: 'ltr',
+    format: moment.localeData().longDateFormat('L'),
+    separator: ' - ',
+  },
+},
+
+
+function (start, end) {
+    $("#tanggal_mulai").val(start.unix())
+    $("#tanggal_akhir").val(end.unix())
+  }
+)
 $(".tanggal").daterangepicker({
   // format: 'dd',
   singleDatePicker: true,

@@ -53,6 +53,10 @@ class Autoload extends \CodeIgniter\Config\AutoloadConfig
 			'Config'      => APPPATH . 'Config',
 			APP_NAMESPACE => APPPATH,                // For custom namespace
 			'App'         => APPPATH,                // To ensure filters, etc still found,
+
+
+			'Myth\Auth\Config'	=> APPPATH.'ThirdParty/myth-auth/config',
+			'Myth\Auth\Database\Migrations' => APPPATH.'ThirdParty/myth-auth/database'
 		];
 
 		/**

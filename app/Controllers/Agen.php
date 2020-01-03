@@ -43,7 +43,7 @@ class Agen extends Controller
         return view('agen/index', $data);
 		
     }
-    public function show($id = null)
+    public function show($id)
     {
         helper('auth');
         if(!function_exists('user')) helper('auth');

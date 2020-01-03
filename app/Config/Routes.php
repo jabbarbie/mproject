@@ -104,7 +104,9 @@ $routes->group('/', ['filter' => 'role:admin,superadmin,cluster,cabang,srbb,atf'
     $routes->get('agen/show/(:id)', 'Agen::show/$1');
 	
 	// khusus admin
-	$routes->resource('pegawai', ['filter'	=> 'permission:fullaccess']);
+	$routes->resource('pegawai', ['filter'	=> 'permission:fullaccess', 'except' => 'show']);
+    $routes->get('pegawai/show/(:id)', 'Pegawai::show/$1');
+
 	$routes->resource('cabang',['filter'	=> 'permission:fullaccess']);
 	$routes->resource('kota', ['filter'	=> 'permission:fullaccess']);
 

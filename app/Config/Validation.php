@@ -47,7 +47,7 @@ class Validation
 	public $pegawai 	= [
 		'nik'			=> [
 			'label'	=> 'NIK',
-			'rules'	=> 'required|unique',
+			'rules'	=> 'required',
 			'errors'	=> [
 				'unique'	=> 'Sudah ada '
 			]

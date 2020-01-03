@@ -1,8 +1,8 @@
 <div class="alert alert-info alert-dismissible">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                  <h5><i class="icon fas fa-info"></i>Informasi!</h5>
-                  Periode dan Target boleh dikosongkan, jika tidak diisi maka akan mengikuti <i>default</i> target dari masing-masing kategori.
-                </div>
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+<h5><i class="icon fas fa-info"></i>Informasi!</h5>
+Periode dan Target boleh dikosongkan, jika tidak diisi maka akan mengikuti <i>default</i> target dari masing-masing kategori.
+</div>
 <div class="card card-outline card-warning  ">
   <div class="card-header bg-primary">
       <h3 class="card-title">Form Data</h3>
@@ -11,7 +11,9 @@
         </button>
       </div>
   </div>
-  <form class="form-horizontal formx" action='<?= base_url('pegawai/create')?>' method="POST">  
+  <form class="form-horizontal formx" action='<?= base_url('pegawai/create')?>' method="POST"> 
+  <input type="hidden" name="tanggal_mulai" id="tanggal_mulai" />
+  <input type="hidden" name="tanggal_akhir" id="tanggal_akhir" /> 
   <div class="card-body">
 
         <div class="row">

@@ -21,7 +21,6 @@ class MTarget extends Model
     public function getTargetByIDPegawai($id_pegawai, $periode = null)
     {
         $target = $this->db->table('tbl_target');
-        $target->where('id_pegawai', $id_pegawai);
         $target->selectSum('target', 'jumlah');
         // $target->select('target');
 
@@ -36,11 +35,12 @@ class MTarget extends Model
 
 
         }
-        // return $periode;
+
         $target->where('tanggal_mulai >= ', $periode['tanggal_mulai']);
         $target->where('tanggal_mulai <= ', $periode['tanggal_akhir']);
         $target->orWhere('tanggal_akhir >= ', $periode['tanggal_mulai']);
         $target->where('tanggal_akhir <= ', $periode['tanggal_akhir']);
+        $target->where('id_pegawai', $id_pegawai);
 
 
         // $target->where('tanggal_mulai BETWEEN '.$periode['tanggal_mulai'].' AND ', $periode['tanggal_akhir']);
@@ -48,7 +48,7 @@ class MTarget extends Model
       
         // $target->groupBy('id_pegawai');
 
-        return $target->get()->getRowArray();
+        return $target->get()->getRowArray()['jumlah']??0;
     }
 
 }

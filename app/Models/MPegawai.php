@@ -71,4 +71,12 @@ class MPegawai extends Model
         return $pegawai->get()->getRowArray()['total'];
     }
 
+    public function getPegawai($id)
+    {
+        $p  = $this->db->table('tbl_pegawai');
+        $p->join('tbl_kategori','tbl_pegawai.id_kategori = tbl_kategori.id_kategori','INNER');
+        $p->where('id_pegawai', $id);
+        return $p->get()->getRowObject();
+    }
+
 }

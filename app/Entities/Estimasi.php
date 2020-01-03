@@ -7,7 +7,6 @@
  * akan diolah dan dikembalikan menjadi 12 Desember 2012
  */
 use CodeIgniter\Entity;
-use CodeIgniter\I18n\Time;
 class Estimasi extends Entity
 {
     protected $datamap = [];

@@ -35,7 +35,7 @@
                     <th>NIK</th>
                     <th>Nama</th>
                     <th>Kategori</th>
-                    <th width="20%">Jumlah Agen</th>
+                    <th width="15%">Target</th>
                   </tr>
                 </thead>
               

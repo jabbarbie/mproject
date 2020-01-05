@@ -1,7 +1,7 @@
 {
-    "name": "codeigniter4/appstarter",
+    "name": "jabbarbie/mproject",
     "type": "project",
-    "description": "CodeIgniter4 starter app",
+    "description": "Aplikasi Pos",
     "homepage": "https://codeigniter.com",
     "license": "MIT",
 	"repositories": [

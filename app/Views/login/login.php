@@ -38,7 +38,7 @@
 		  </div>
 		  <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+				<i class="fas fa-lock"></i>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
 
      
       <!-- /.social-auth-links -->
-	  <?php if ($config->allowRegistration) : ?>
+	  <?php if ($config->allowRegistration && 1 == 2) : ?>
       <p class="mb-1">
         <a href="forgot">I forgot my password</a>
       </p>

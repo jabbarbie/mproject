@@ -126,7 +126,7 @@ nb-configuration.xml
 /phpunit*.xml
 
 /tests/
-app/Databases/
+app/Databases/Migrations
 public/node_modules/
 public/dist/
 public/plugins_ekstra/

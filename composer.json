@@ -1,6 +1,6 @@
 {
     "name": "jabbarbie/mproject",
-    "type": "personal project",
+    "type": "project",
     "description": "CodeIgniter4 starter app",
     "homepage": "https://codeigniter.com",
     "license": "MIT",
@@ -16,7 +16,6 @@
         "codeigniter4/codeigniter4": "dev-develop",
         "myth/auth": "=1.0-beta.2",
         "mpdf/mpdf": "^8.0"
-        
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",

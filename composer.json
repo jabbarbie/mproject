@@ -1,5 +1,5 @@
 {
-    "name": "jabbarbie/mproject",
+    "name": "codeigniter4/appstarter",
     "type": "project",
     "description": "CodeIgniter4 starter app",
     "homepage": "https://codeigniter.com",
@@ -12,10 +12,10 @@
     ],
     "require": {
         "php": ">=7.2",
-        "ext-intl" : "*",
         "codeigniter4/codeigniter4": "dev-develop",
         "myth/auth": "=1.0-beta.2",
         "mpdf/mpdf": "^8.0"
+        
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",

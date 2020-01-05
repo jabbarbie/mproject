@@ -1,6 +1,6 @@
 {
-    "name": "codeigniter4/appstarter",
-    "type": "project",
+    "name": "jabbarbie/mproject",
+    "type": "personal project",
     "description": "CodeIgniter4 starter app",
     "homepage": "https://codeigniter.com",
     "license": "MIT",
@@ -12,6 +12,7 @@
     ],
     "require": {
         "php": ">=7.2",
+        "ext-intl" : "*",
         "codeigniter4/codeigniter4": "dev-develop",
         "myth/auth": "=1.0-beta.2",
         "mpdf/mpdf": "^8.0"

@@ -17,7 +17,13 @@ function tanggalLengkap(int $unix)
             lang('bahasa.'.$tanggal->format('M')).' '.
             $tanggal->format('Y');
 }
-
+function tanggalSingkat(int $unix)
+{
+    $tanggal = new DateTime('@'.$unix);
+    return  $tanggal->format('d').' - '.
+            $tanggal->format('M').' '.
+            $tanggal->format('Y');
+}
 function bulansaja(int $unix)
 {
     

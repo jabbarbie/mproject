@@ -7,7 +7,7 @@ class MTarget extends Model
     protected $table        = "tbl_target";
     protected $primaryKey   = "id_target";
 
-    protected $returnType = 'array';
+    protected $returnType = '\App\Entities\Target';
     protected $useSoftDeletes = false;
 
     protected $allowedFields = ['id_pegawai', 'target','tanggal_mulai','tanggal_akhir'];
@@ -49,6 +49,20 @@ class MTarget extends Model
         // $target->groupBy('id_pegawai');
 
         return $target->get()->getRowArray()['jumlah']??0;
+    }
+
+
+    /**
+     * Mencari semua target pegawai berdasarkan ID Pegawai
+     * @param : int id_pegawai 
+     * @return : Array
+     */
+    public function getAllTargetByIDPegawai($id_pegawai)
+    {
+        $target = $this->db->table('tbl_target');
+        $target->where('id_pegawai', $id_pegawai);
+
+        return $target->get()->getResultArray();
     }
 
 }

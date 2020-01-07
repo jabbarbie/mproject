@@ -8,10 +8,6 @@
   </div>
 
   <div class="card-body">
-    <?php
-      // var_dump($data[0]['nama_pegawai']);
-      // echo $data['nama_pegawai'];
-    ?>
     <div class="form-group row">
       <label class="col-sm-3 col-form-label">NIK </label>
       <div class="col-sm-6">

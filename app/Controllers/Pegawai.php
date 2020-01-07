@@ -49,6 +49,11 @@ class Pegawai extends Controller
         // $userModel = new \Myth\Auth\Authorization\GroupModel();
 
         // die();
+        $t = new \App\Models\MTarget();
+        $target = $t->where('id_pegawai', $id)->findAll();
+
+        // var_dump($target);
+        // die();
         $p = new MPegawai();
         $pegawai = $p->getPegawai($id);
         $data = [
@@ -59,6 +64,7 @@ class Pegawai extends Controller
                 ['text' => 'Detail ', 'link' => '']
             ],
             'data'  => $pegawai,
+            'target'    => $target,
             // 'user_id'       => strtoupper($userModel->getGroupsForUser($datashow->user_id)[0]['name']),
         ];
         return view('pegawai/show', $data);
